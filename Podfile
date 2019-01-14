@@ -3,9 +3,9 @@ platform :ios, '10.0'
 target 'Bulars' do
   use_frameworks!
   
-  # pod 'Firebase/Core'
-  # pod 'Firebase/MLVision'
-  # pod 'Firebase/MLVisionTextModel'
+  pod 'Firebase/Core'
+  pod 'Firebase/MLVision'
+  pod 'Firebase/MLVisionTextModel'
   pod 'SwiftSoup'
   pod 'SwiftLint'
   pod 'SwiftGen'

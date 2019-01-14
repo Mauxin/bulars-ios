@@ -1,6 +1,5 @@
 import UIKit
 import Firebase
-import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,7 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // swiftlint:disable force_unwrapping
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        IQKeyboardManager.shared.enable = true
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window!.makeKeyAndVisible()
