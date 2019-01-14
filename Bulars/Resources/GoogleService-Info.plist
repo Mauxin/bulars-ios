@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1074657025483-c68s4rvdi3mou4ail4b120r3vn05r788.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1074657025483-c68s4rvdi3mou4ail4b120r3vn05r788</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCT4gR2P8vp48Uo1TghVHy-BCr3Dtqzjls</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1074657025483</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.movile.Bulars</string>
+	<key>PROJECT_ID</key>
+	<string>bulars-91196</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bulars-91196.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1074657025483:ios:e8bb7319e09dc5d9</string>
+	<key>DATABASE_URL</key>
+	<string>https://bulars-91196.firebaseio.com</string>
+</dict>
+</plist>

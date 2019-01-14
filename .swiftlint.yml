@@ -1,0 +1,41 @@
+disabled_rules:
+  - line_length
+  - trailing_whitespace
+  - leading_whitespace
+  - identifier_name
+  - large_tuple
+  - cyclomatic_complexity
+  - attributes
+  - multiline_parameters
+  - multiline_arguments
+  - implicit_return
+  - colon
+  - comma
+
+opt_in_rules:
+  - closure_end_indentation
+  - closure_spacing
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - number_separator
+  - overridden_super_call
+  - pattern_matching_keywords
+  - private_action
+  - prohibited_super_call
+  - sorted_first_last
+  - strict_fileprivate
+  - unneeded_parentheses_in_closure_argument
+  - yoda_condition
+
+included:
+  - Bulars
+  - BularsTests
+
+excluded:
+  - Pods
+  - Bulars/Resources/Generated/Assets.swift

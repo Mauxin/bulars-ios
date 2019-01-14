@@ -1,0 +1,14 @@
+input_dir: Bulars/Resources/
+output_dir: Bulars/Resources/Generated/
+strings:
+  paths: 
+    - Localizable.strings
+  output: Localization.swift
+  templateName: structured-swift4
+  params:
+    enumName: Localization
+xcassets:
+  - paths: 
+      - Assets.xcassets
+    output: Assets.swift
+    templateName: swift4

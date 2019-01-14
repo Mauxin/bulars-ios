@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Bulars" customModuleProvider="target">
+            <connections>
+                <outlet property="startReadButton" destination="YZz-C4-TUE" id="sai-Pj-yX3"/>
+                <outlet property="testImage" destination="70S-DL-PyC" id="gvr-Xg-KYp"/>
+                <outlet property="titleLabel" destination="rHj-q5-NDO" id="tMX-P1-X3e"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEM VINDO AO BULARS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-q5-NDO">
+                    <rect key="frame" x="0.0" y="349" width="375" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="cjI-FR-DER"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZz-C4-TUE">
+                    <rect key="frame" x="62.5" y="461" width="250" height="50"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="IXI-T6-QVG"/>
+                        <constraint firstAttribute="width" constant="250" id="Pvx-Dc-ijo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Câmera">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="startReadButtonAction" destination="-1" eventType="touchUpInside" id="8vo-dW-17u"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashImage" translatesAutoresizingMaskIntoConstraints="NO" id="70S-DL-PyC">
+                    <rect key="frame" x="0.0" y="70" width="375" height="267"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rHj-q5-NDO" firstAttribute="width" secondItem="70S-DL-PyC" secondAttribute="width" id="Agm-Yd-FOE"/>
+                <constraint firstItem="70S-DL-PyC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="UfE-53-pbY"/>
+                <constraint firstItem="70S-DL-PyC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="Ug9-Kv-uTv"/>
+                <constraint firstItem="YZz-C4-TUE" firstAttribute="top" secondItem="rHj-q5-NDO" secondAttribute="bottom" constant="12" id="YJd-o1-07z"/>
+                <constraint firstItem="rHj-q5-NDO" firstAttribute="centerX" secondItem="70S-DL-PyC" secondAttribute="centerX" id="ffI-6z-yl6"/>
+                <constraint firstItem="70S-DL-PyC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="kAf-Kx-dGU"/>
+                <constraint firstItem="YZz-C4-TUE" firstAttribute="centerX" secondItem="rHj-q5-NDO" secondAttribute="centerX" id="kZw-YS-cGG"/>
+                <constraint firstItem="rHj-q5-NDO" firstAttribute="top" secondItem="70S-DL-PyC" secondAttribute="bottom" constant="12" id="qB9-d2-kKM"/>
+                <constraint firstItem="70S-DL-PyC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="rZG-rf-U2S"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="splashImage" width="225" height="225"/>
+    </resources>
+</document>
