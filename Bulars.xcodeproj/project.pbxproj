@@ -14,8 +14,6 @@
 		FD070CAB20F949E900B061FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD070CAA20F949E900B061FA /* Assets.xcassets */; };
 		FD070CB920F949EA00B061FA /* BularsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD070CB820F949EA00B061FA /* BularsTests.swift */; };
 		FD070CC420F949EA00B061FA /* BularsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD070CC320F949EA00B061FA /* BularsUITests.swift */; };
-		FD3AD88F2191B54F00D8917B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3AD88D2191B54F00D8917B /* CameraViewController.swift */; };
-		FD3AD8902191B54F00D8917B /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3AD88E2191B54F00D8917B /* CameraViewController.xib */; };
 		FD78016521AC22A800D4D96A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78016421AC22A800D4D96A /* HomeViewModel.swift */; };
 		FD78016A21AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78016921AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift */; };
 		FD78016C21AC5BD800D4D96A /* WebResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */; };
@@ -70,8 +68,6 @@
 		FD070CBF20F949EA00B061FA /* BularsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BularsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD070CC320F949EA00B061FA /* BularsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BularsUITests.swift; sourceTree = "<group>"; };
 		FD070CC520F949EA00B061FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD3AD88D2191B54F00D8917B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		FD3AD88E2191B54F00D8917B /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		FD78016421AC22A800D4D96A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FD78016921AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResultViewController.temp_caseinsensitive_rename.swift; sourceTree = "<group>"; };
 		FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebResultViewController.xib; sourceTree = "<group>"; };
@@ -213,8 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				FDBDCDE62110D9E9008EAA86 /* CameraManager.swift */,
-				FD3AD88D2191B54F00D8917B /* CameraViewController.swift */,
-				FD3AD88E2191B54F00D8917B /* CameraViewController.xib */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -426,7 +420,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3AD8902191B54F00D8917B /* CameraViewController.xib in Resources */,
 				FD78016C21AC5BD800D4D96A /* WebResultViewController.xib in Resources */,
 				FDCC8FDF21EE0146002AB962 /* GoogleService-Info.plist in Resources */,
 				FDEB21CA21337CE9001FE269 /* ProfileViewController.xib in Resources */,
@@ -602,7 +595,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3AD88F2191B54F00D8917B /* CameraViewController.swift in Sources */,
 				FDC03DAC213253F800EE0DEA /* LoadingAlert + UIViewController.swift in Sources */,
 				FD070CA420F949E800B061FA /* AppDelegate.swift in Sources */,
 				FDADBCCA2133087500615F5F /* AnalyticsEvents.swift in Sources */,
