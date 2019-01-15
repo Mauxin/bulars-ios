@@ -22,7 +22,7 @@
 		FDADBCCA2133087500615F5F /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADBCC92133087500615F5F /* AnalyticsEvents.swift */; };
 		FDBDCDE82110D9E9008EAA86 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBDCDE62110D9E9008EAA86 /* CameraManager.swift */; };
 		FDC03DAC213253F800EE0DEA /* LoadingAlert + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC03DAB213253F800EE0DEA /* LoadingAlert + UIViewController.swift */; };
-		FDD4883D210F35F800B93A49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD4883C210F35F700B93A49 /* GoogleService-Info.plist */; };
+		FDCC8FDF21EE0146002AB962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDCC8FDE21EE0146002AB962 /* GoogleService-Info.plist */; };
 		FDD48843210F374700B93A49 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD48841210F374700B93A49 /* HomeViewController.swift */; };
 		FDD48844210F374700B93A49 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD48842210F374700B93A49 /* HomeViewController.xib */; };
 		FDD48846210F398B00B93A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD48845210F398B00B93A49 /* Main.storyboard */; };
@@ -78,7 +78,7 @@
 		FDADBCC92133087500615F5F /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		FDBDCDE62110D9E9008EAA86 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		FDC03DAB213253F800EE0DEA /* LoadingAlert + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadingAlert + UIViewController.swift"; sourceTree = "<group>"; };
-		FDD4883C210F35F700B93A49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDCC8FDE21EE0146002AB962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDD48841210F374700B93A49 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FDD48842210F374700B93A49 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FDD48845210F398B00B93A49 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			children = (
 				FDFDF00521AC6CA0009F53AB /* Generated */,
 				FD070CAF20F949E900B061FA /* Info.plist */,
-				FDD4883C210F35F700B93A49 /* GoogleService-Info.plist */,
+				FDCC8FDE21EE0146002AB962 /* GoogleService-Info.plist */,
 				FD070CAA20F949E900B061FA /* Assets.xcassets */,
 				FDFDF00221AC6AAF009F53AB /* Localizable.strings */,
 			);
@@ -428,9 +428,9 @@
 			files = (
 				FD3AD8902191B54F00D8917B /* CameraViewController.xib in Resources */,
 				FD78016C21AC5BD800D4D96A /* WebResultViewController.xib in Resources */,
+				FDCC8FDF21EE0146002AB962 /* GoogleService-Info.plist in Resources */,
 				FDEB21CA21337CE9001FE269 /* ProfileViewController.xib in Resources */,
 				FD070CAB20F949E900B061FA /* Assets.xcassets in Resources */,
-				FDD4883D210F35F800B93A49 /* GoogleService-Info.plist in Resources */,
 				FDFDF00321AC6AAF009F53AB /* Localizable.strings in Resources */,
 				FDD48844210F374700B93A49 /* HomeViewController.xib in Resources */,
 				FDD48846210F398B00B93A49 /* Main.storyboard in Resources */,
@@ -769,14 +769,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PG7SEBUB3;
+				DEVELOPMENT_TEAM = CTLNA6G88R;
 				INFOPLIST_FILE = Bulars/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.movile.Bulars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mauxin.Bulars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -789,14 +789,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PG7SEBUB3;
+				DEVELOPMENT_TEAM = CTLNA6G88R;
 				INFOPLIST_FILE = Bulars/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.movile.Bulars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mauxin.Bulars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

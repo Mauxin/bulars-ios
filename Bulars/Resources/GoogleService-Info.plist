@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1074657025483-c68s4rvdi3mou4ail4b120r3vn05r788.apps.googleusercontent.com</string>
+	<string>640896118578-n1i3ikp58k07bv07gfjau5le6dhbmsri.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1074657025483-c68s4rvdi3mou4ail4b120r3vn05r788</string>
+	<string>com.googleusercontent.apps.640896118578-n1i3ikp58k07bv07gfjau5le6dhbmsri</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCT4gR2P8vp48Uo1TghVHy-BCr3Dtqzjls</string>
+	<string>AIzaSyBVPz_Jnnd25eKAGw82AJI7-bURB0lmT1U</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1074657025483</string>
+	<string>640896118578</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.movile.Bulars</string>
+	<string>com.mauxin.Bulars</string>
 	<key>PROJECT_ID</key>
-	<string>bulars-91196</string>
+	<string>bulars-828da</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bulars-91196.appspot.com</string>
+	<string>bulars-828da.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1074657025483:ios:e8bb7319e09dc5d9</string>
+	<string>1:640896118578:ios:4ab71ab94c835041</string>
 	<key>DATABASE_URL</key>
-	<string>https://bulars-91196.firebaseio.com</string>
+	<string>https://bulars-828da.firebaseio.com</string>
 </dict>
 </plist>
