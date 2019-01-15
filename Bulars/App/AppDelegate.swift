@@ -10,6 +10,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        let db = Firestore.firestore()
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window!.makeKeyAndVisible()
         window!.rootViewController = NavigationHandler.tabController()

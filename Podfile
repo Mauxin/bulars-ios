@@ -4,6 +4,7 @@ target 'Bulars' do
   use_frameworks!
   
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
   pod 'Firebase/MLVision'
   pod 'Firebase/MLVisionTextModel'
   pod 'SwiftSoup'
