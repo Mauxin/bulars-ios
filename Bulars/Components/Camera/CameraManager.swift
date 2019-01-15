@@ -16,6 +16,7 @@ class CameraManager: NSObject {
             let pickerController = UIImagePickerController()
             pickerController.delegate = self
             pickerController.sourceType = .camera
+            pickerController.cameraCaptureMode = .photo
             currentViewController.dismissLoading()
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                 self.currentViewController.present(pickerController, animated: true, completion: nil)

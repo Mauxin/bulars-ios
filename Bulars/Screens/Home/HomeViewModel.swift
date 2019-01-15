@@ -34,6 +34,10 @@ class HomeViewModel {
         let textDetector = vision.onDeviceTextRecognizer()
         let visionImage = VisionImage(image: image)
         
+        let metadata = VisionImageMetadata()
+        metadata.orientation = self.detectorOrientation(in: image)
+        visionImage.metadata = metadata
+        
         textDetector.process(visionImage) { result, error in
             guard error == nil, let result = result else {
                 //TODO: Empty State
@@ -67,6 +71,28 @@ class HomeViewModel {
             let webController = WebResultViewController(medicate: (biggestText?.text.lowercased()) ?? "Erro")
             //TODO: Empty State
             vc.navigationController?.pushViewController(webController, animated: true)
+        }
+    }
+    
+    //Detects orientation of the selected or captured image
+    func detectorOrientation(in image: UIImage) -> VisionDetectorImageOrientation {
+        switch image.imageOrientation {
+        case .up:
+            return .topLeft
+        case .down:
+            return .bottomRight
+        case .left:
+            return .leftBottom
+        case .right:
+            return .rightTop
+        case .upMirrored:
+            return .topRight
+        case .downMirrored:
+            return .bottomLeft
+        case .leftMirrored:
+            return .leftTop
+        case .rightMirrored:
+            return .rightBottom
         }
     }
     
