@@ -14,6 +14,7 @@
 		FD070CAB20F949E900B061FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD070CAA20F949E900B061FA /* Assets.xcassets */; };
 		FD070CB920F949EA00B061FA /* BularsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD070CB820F949EA00B061FA /* BularsTests.swift */; };
 		FD070CC420F949EA00B061FA /* BularsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD070CC320F949EA00B061FA /* BularsUITests.swift */; };
+		FD0D0AAF21F64A1E00D1147E /* WebResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D0AAE21F64A1E00D1147E /* WebResultViewModel.swift */; };
 		FD78016521AC22A800D4D96A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78016421AC22A800D4D96A /* HomeViewModel.swift */; };
 		FD78016A21AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78016921AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift */; };
 		FD78016C21AC5BD800D4D96A /* WebResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */; };
@@ -69,6 +70,7 @@
 		FD070CBF20F949EA00B061FA /* BularsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BularsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD070CC320F949EA00B061FA /* BularsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BularsUITests.swift; sourceTree = "<group>"; };
 		FD070CC520F949EA00B061FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD0D0AAE21F64A1E00D1147E /* WebResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResultViewModel.swift; sourceTree = "<group>"; };
 		FD78016421AC22A800D4D96A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FD78016921AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResultViewController.temp_caseinsensitive_rename.swift; sourceTree = "<group>"; };
 		FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebResultViewController.xib; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */,
 				FD78016921AC5A8200D4D96A /* WebResultViewController.temp_caseinsensitive_rename.swift */,
+				FD0D0AAE21F64A1E00D1147E /* WebResultViewModel.swift */,
 			);
 			path = WebResult;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				FDC03DAC213253F800EE0DEA /* LoadingAlert + UIViewController.swift in Sources */,
 				FD070CA420F949E800B061FA /* AppDelegate.swift in Sources */,
 				FDCC8FE421EE54D4002AB962 /* Requester.swift in Sources */,
+				FD0D0AAF21F64A1E00D1147E /* WebResultViewModel.swift in Sources */,
 				FDADBCCA2133087500615F5F /* AnalyticsEvents.swift in Sources */,
 				FDD48843210F374700B93A49 /* HomeViewController.swift in Sources */,
 				FDF6953B2124EB7900E244AA /* TextFilter.swift in Sources */,

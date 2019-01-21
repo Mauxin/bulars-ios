@@ -1,5 +1,4 @@
 import UIKit
-import WebKit
 import SwiftSoup
 import Firebase
 
@@ -15,8 +14,8 @@ class WebResultViewController: UIViewController {
     let db = Firestore.firestore()
     
     init(medicate: String) {
-        self.medicateURL = URL(string: "https://www.bulario.com/" + medicate + "/")
-        self.medicate = medicate
+        self.medicate = medicate.replacingOccurrences(of: " ", with: "_").lowercased()
+        self.medicateURL = URL(string: "https://www.bulario.com/" + self.medicate + "/")
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,13 +25,13 @@ class WebResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = medicate.uppercased()
+        title = medicate.capitalized
         textContent.text = ""
         updateNavigationBar()
-        showLoading()
+        //showLoading()
         
         getDescriptionFor(medicate: medicate.lowercased()) { description in
-            self.dismissLoading()
+            //self.dismissLoading()
             self.textContent.text = description
         }
     }
