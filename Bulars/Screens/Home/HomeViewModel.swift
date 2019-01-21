@@ -104,6 +104,7 @@ extension HomeViewModel: HomeViewControllerDelegate {
         
         homeViewController.navigationController?.pushViewController(webController, animated: true)
         homeViewController.navigationItem.titleView = nil
+        homeViewController.updateNavigationBar()
         
         AnalyticsEvents.searchingEvent(term: searchTerm.lowercased(), type: "text")
     }
