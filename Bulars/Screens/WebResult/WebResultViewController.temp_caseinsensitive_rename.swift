@@ -1,16 +1,19 @@
 import UIKit
 import WebKit
 import SwiftSoup
+import Firebase
 
+// swiftlint:disable force_cast
+// swiftlint:disable force_unwrapping
 class WebResultViewController: UIViewController {
     
     @IBOutlet weak var textContent: UITextView!
     
     let medicateURL: URL?
     let medicate: String
+    let db = Firestore.firestore()
     
     init(medicate: String) {
-        
         self.medicateURL = URL(string: "https://www.bulario.com/" + medicate + "/")
         self.medicate = medicate
         super.init(nibName: nil, bundle: nil)
@@ -23,20 +26,30 @@ class WebResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = medicate.uppercased()
+        textContent.text = ""
         updateNavigationBar()
+        showLoading()
         
-        do {
-            guard let url: URL = medicateURL else {
-                //TODO: Empty State
-                return
-            }
-            
-            let doc: Document = try SwiftSoup.parse(String(contentsOf: url))
-            let body: Element? = try doc.body()?.getElementById("bulaBody")
-            textContent.text = try body?.text()
-        } catch {
-            //TODO: Empty State or error
+        getDescriptionFor(medicate: medicate.lowercased()) { description in
+            self.dismissLoading()
+            self.textContent.text = description
         }
+    }
+    
+    private func getDescriptionFor(medicate: String, completion: @escaping (String) -> Void) {
+        
+        db.collection("medicates").whereField("name", isEqualTo: medicate).getDocuments { querySnapshot, err in
+            if let err = err {
+                completion(err.localizedDescription)
+            } else {
+                for document in querySnapshot!.documents {
+                    let medicate = document.data()
+                    
+                    completion(medicate["medicineBottle"] as! String)
+                }
+            }
+        }
+        
     }
     
     private func updateNavigationBar() {
