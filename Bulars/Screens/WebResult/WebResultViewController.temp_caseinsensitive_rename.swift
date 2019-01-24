@@ -76,7 +76,8 @@ class WebResultViewController: UIViewController {
     }
     
     private func addMedicateToDB(_ medicate: String, description: String) {
-        var ref: DocumentReference? = nil
+        var ref: DocumentReference?
+        
         ref = db.collection("medicates").addDocument(data: [
             "name": medicate,
             "medicineBottle": description
