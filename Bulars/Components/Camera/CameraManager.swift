@@ -12,7 +12,7 @@ class CameraManager: NSObject {
     
     func camera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            AnalyticsEvents.clickEvent(content: "camera_start")
+            AnalyticsEvents.clickEvent(content: Localized.cameraStart)
             let pickerController = UIImagePickerController()
             pickerController.delegate = self
             pickerController.sourceType = .camera
@@ -26,7 +26,7 @@ class CameraManager: NSObject {
     
     func photoLibrary() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            AnalyticsEvents.clickEvent(content: "library_start")
+            AnalyticsEvents.clickEvent(content: Localized.libraryStart)
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
             myPickerController.sourceType = .photoLibrary
@@ -41,17 +41,17 @@ class CameraManager: NSObject {
         currentViewController = controller
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Câmera", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: Localized.camera, style: .default, handler: { _ in
             self.currentViewController.showLoading()
             self.camera()
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Galeria", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: Localized.library, style: .default, handler: { _ in
             self.currentViewController.showLoading()
             self.photoLibrary()
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: Localized.cancel, style: .cancel, handler: nil))
         
         controller.present(actionSheet, animated: true, completion: nil)
     }
@@ -94,7 +94,7 @@ extension CameraManager: UIImagePickerControllerDelegate, UINavigationController
             }
         } else {
             //TODO: Empty State
-            print("Ocorreu um erro inesperado")
+            print(Localized.error)
         }
         currentViewController.dismiss(animated: true, completion: nil)
     }

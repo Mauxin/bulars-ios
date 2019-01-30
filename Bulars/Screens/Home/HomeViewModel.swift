@@ -41,7 +41,7 @@ class HomeViewModel {
         textDetector.process(visionImage) { result, error in
             guard error == nil, let result = result else {
                 //TODO: Empty State
-                vc.titleLabel.text = "SEM TEXTO DETECTADO"
+                vc.titleLabel.text = Localized.noText
                 return
             }
             
@@ -58,8 +58,8 @@ class HomeViewModel {
             
             vc.titleLabel.text = biggestText?.text.lowercased()
             
-            AnalyticsEvents.searchingEvent(term: (biggestText?.text.lowercased()) ?? "Erro", type: "image")
-            let webController = WebResultViewController(medicate: (biggestText?.text.lowercased()) ?? "Erro")
+            AnalyticsEvents.searchingEvent(term: (biggestText?.text.lowercased()) ?? Localized.error, type: Localized.image)
+            let webController = WebResultViewController(medicate: (biggestText?.text.lowercased()) ?? Localized.error)
             //TODO: Empty State
             vc.navigationController?.pushViewController(webController, animated: true)
         }
@@ -96,14 +96,14 @@ extension HomeViewModel: HomeViewControllerDelegate {
         homeViewController.navigationItem.titleView = nil
         homeViewController.updateNavigationBar()
         
-        AnalyticsEvents.searchingEvent(term: searchTerm.lowercased(), type: "text")
+        AnalyticsEvents.searchingEvent(term: searchTerm.lowercased(), type: Localized.text)
     }
     
     func dismissSearchAction(_ homeViewController: HomeViewController) {
         homeViewController.navigationItem.titleView = nil
         homeViewController.updateNavigationBar()
         
-        AnalyticsEvents.clickEvent(content: "cancel_text_search")
+        AnalyticsEvents.clickEvent(content: Localized.cancelTextSearch)
     }
     
 }

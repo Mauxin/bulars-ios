@@ -11,7 +11,7 @@ class WebResultViewController: UIViewController {
     init(medicate: String) {
         self.medicate = medicate.replacingOccurrences(of: " ", with: "_").lowercased()
         self.viewModel = WebResultViewModel(
-            url: URL(string: "https://www.bulario.com/" + self.medicate + "/")!)
+            url: URL(string: Localized.siteUrl + self.medicate + Localized.endUrl)!)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,16 +36,16 @@ class WebResultViewController: UIViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.topItem?.title = ""
-        let favoriteNavBtn = UIBarButtonItem(image: UIImage(named: "share"), style: .plain, target: self, action: #selector(favoriteClicked))
+        let favoriteNavBtn = UIBarButtonItem(image: Asset.favIcon.image, style: .plain, target: self, action: #selector(favoriteClicked))
         navigationItem.rightBarButtonItem  = favoriteNavBtn
     }
     
     @IBAction private func dismissClicked() {
-        AnalyticsEvents.clickEvent(content: "dismiss_result")
+        AnalyticsEvents.clickEvent(content: Localized.dismiss)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction private func favoriteClicked() {
-        AnalyticsEvents.clickEvent(content: "favorite_clicked")
+        AnalyticsEvents.clickEvent(content: Localized.favorite)
     }
 }

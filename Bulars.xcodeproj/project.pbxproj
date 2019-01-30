@@ -16,6 +16,8 @@
 		FD070CC420F949EA00B061FA /* BularsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD070CC320F949EA00B061FA /* BularsUITests.swift */; };
 		FD0D0AAF21F64A1E00D1147E /* WebResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D0AAE21F64A1E00D1147E /* WebResultViewModel.swift */; };
 		FD7239A62201DAE300C15066 /* WebResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7239A52201DAE200C15066 /* WebResultViewController.swift */; };
+		FD7239AB22020C0B00C15066 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7239A822020C0B00C15066 /* Assets.swift */; };
+		FD7239AC22020C0B00C15066 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7239A922020C0B00C15066 /* Localization.swift */; };
 		FD78016521AC22A800D4D96A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78016421AC22A800D4D96A /* HomeViewModel.swift */; };
 		FD78016C21AC5BD800D4D96A /* WebResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */; };
 		FDADBCCA2133087500615F5F /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADBCC92133087500615F5F /* AnalyticsEvents.swift */; };
@@ -72,6 +74,8 @@
 		FD070CC520F949EA00B061FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD0D0AAE21F64A1E00D1147E /* WebResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResultViewModel.swift; sourceTree = "<group>"; };
 		FD7239A52201DAE200C15066 /* WebResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResultViewController.swift; sourceTree = "<group>"; };
+		FD7239A822020C0B00C15066 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		FD7239A922020C0B00C15066 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		FD78016421AC22A800D4D96A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FD78016B21AC5BD800D4D96A /* WebResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebResultViewController.xib; sourceTree = "<group>"; };
 		FDADBCC92133087500615F5F /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
@@ -199,6 +203,15 @@
 			path = TextFilter;
 			sourceTree = "<group>";
 		};
+		FD7239A722020C0B00C15066 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				FD7239A822020C0B00C15066 /* Assets.swift */,
+				FD7239A922020C0B00C15066 /* Localization.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		FDADBCC82133084D00615F5F /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +250,7 @@
 		FDD4883E210F36DD00B93A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FDFDF00521AC6CA0009F53AB /* Generated */,
+				FD7239A722020C0B00C15066 /* Generated */,
 				FD070CAF20F949E900B061FA /* Info.plist */,
 				FDCC8FDE21EE0146002AB962 /* GoogleService-Info.plist */,
 				FD070CAA20F949E900B061FA /* Assets.xcassets */,
@@ -303,13 +316,6 @@
 				FDD48845210F398B00B93A49 /* Main.storyboard */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		FDFDF00521AC6CA0009F53AB /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,7 +608,7 @@
 		};
 		FD78016721AC4F4200D4D96A /* Run SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -616,7 +622,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen\n";
+			shellScript = "TemplatePath=$PODS_ROOT/SwiftGen/templates\nLocalizablePath=$PROJECT_DIR/Bulars/Resources\n\n$PODS_ROOT/SwiftGen/bin/swiftgen strings \"$LocalizablePath/Localizable.strings\" -p $TemplatePath/strings/flat-swift4.stencil --output \"$LocalizablePath/Generated/Localization.swift\" --param enumName=Localized;\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -627,12 +633,14 @@
 			files = (
 				FD7239A62201DAE300C15066 /* WebResultViewController.swift in Sources */,
 				FDC03DAC213253F800EE0DEA /* LoadingAlert + UIViewController.swift in Sources */,
+				FD7239AC22020C0B00C15066 /* Localization.swift in Sources */,
 				FD070CA420F949E800B061FA /* AppDelegate.swift in Sources */,
 				FD0D0AAF21F64A1E00D1147E /* WebResultViewModel.swift in Sources */,
 				FDADBCCA2133087500615F5F /* AnalyticsEvents.swift in Sources */,
 				FDD48843210F374700B93A49 /* HomeViewController.swift in Sources */,
 				FDF6953B2124EB7900E244AA /* TextFilter.swift in Sources */,
 				FDBDCDE82110D9E9008EAA86 /* CameraManager.swift in Sources */,
+				FD7239AB22020C0B00C15066 /* Assets.swift in Sources */,
 				FD78016521AC22A800D4D96A /* HomeViewModel.swift in Sources */,
 				FDEB21C921337CE9001FE269 /* ProfileViewController.swift in Sources */,
 				FDF072EB2155782D0078EB15 /* NavigationHandler.swift in Sources */,

@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     }
     
     func updateNavigationBar() {
-        let searchNavBtn = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(HomeViewController.searchButtonAction))
+        let searchNavBtn = UIBarButtonItem(image: Asset.search.image, style: .plain, target: self, action: #selector(HomeViewController.searchButtonAction))
         navigationItem.rightBarButtonItem  = searchNavBtn
     }
 
@@ -33,13 +33,13 @@ class HomeViewController: UIViewController {
         navigationItem.titleView = searchBar
         searchBar.becomeFirstResponder()
         
-        AnalyticsEvents.clickEvent(content: "start_text_search")
+        AnalyticsEvents.clickEvent(content: Localized.startTextSearch)
     }
 }
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        delegate?.startWebButtonAction(self, searchTerm: searchBar.text ?? "Erro")
+        delegate?.startWebButtonAction(self, searchTerm: searchBar.text ?? Localized.error)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
