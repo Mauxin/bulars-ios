@@ -6,4 +6,37 @@
   Copyright © 2018 Murilo Dias. All rights reserved.
 */
 
-"Error" = "Erro";
+// Common
+"ERROR" = "Ocorreu um erro inesperado";
+"OK" = "OK";
+"CANCEL" = "Cancelar";
+"LOADING" = "Carregando...";
+
+// Home
+"CAMERA" = "Câmera";
+"LIBRARY" = "Galeria";
+"NO_TEXT" = "Sem Texto Detectado!";
+
+// WebResult
+
+// Html
+"SITE_URL" = "https://www.bulario.com/";
+"END_URL" = "/";
+"BODY" = "bulaBody";
+"HEADERS" = "h3";
+"HTML_TEXTS" = "p";
+
+// Querys
+"COLLECTION" = "medicates";
+"NAME" = "name";
+"DESCRIPTION" = "medicineBottle";
+
+// Analytics
+"IMAGE" = "image";
+"TEXT" = "text";
+"DISMISS" = "dismiss_result";
+"FAVORITE" = "favorite_clicked";
+"START_TEXT_SEARCH" = "start_text_search";
+"CANCEL_TEXT_SEARCH" = "cancel_text_search";
+"CAMERA_START" = "camera_start";
+"LIBRARY_START" = "library_start";

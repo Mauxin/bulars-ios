@@ -3,7 +3,7 @@ import UIKit
 extension UIViewController {
     
     func showLoading() {
-        let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: Localized.loading, preferredStyle: .alert)
         
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true

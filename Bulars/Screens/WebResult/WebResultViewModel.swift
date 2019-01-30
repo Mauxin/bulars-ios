@@ -23,13 +23,13 @@ class WebResultViewModel {
     }
     
     func getDescriptionFor(medicate: String, completion: @escaping (String) -> Void) {
-        db.collection("medicates").whereField("name", isEqualTo: medicate).getDocuments { querySnapshot, err in
+        db.collection(Localized.collection).whereField(Localized.name, isEqualTo: medicate).getDocuments { querySnapshot, err in
             if err != nil {
-                print("Erro")
+                print(Localized.error)
             } else if !(querySnapshot?.documents.isEmpty)! {
                 for document in querySnapshot!.documents {
                     let medicate = document.data()
-                    completion(medicate["medicineBottle"] as! String)
+                    completion(medicate[Localized.description] as! String)
                 }
             } else {
                 completion(self.getDescriptionFromWeb(medicate))
@@ -40,10 +40,10 @@ class WebResultViewModel {
     private func getDescriptionFromWeb(_ medicate: String) -> String {
         let doc: Document = try! SwiftSoup.parse(String(contentsOf: medicateURL))
         //TODO: empty state
-        let body: Element? = try! doc.body()?.getElementById("bulaBody")
+        let body: Element? = try! doc.body()?.getElementById(Localized.body)
         
-        let headers: [Element] = try! body?.getElementsByTag("h3").array() ?? []
-        let texts: [Element] = try! body?.getElementsByTag("p").array() ?? []
+        let headers: [Element] = try! body?.getElementsByTag(Localized.headers).array() ?? []
+        let texts: [Element] = try! body?.getElementsByTag(Localized.htmlTexts).array() ?? []
         
         var myText = ""
         var counter = 0
@@ -65,9 +65,9 @@ class WebResultViewModel {
     private func addMedicateToDB(_ medicate: String, description: String) {
         var ref: DocumentReference?
         
-        ref = db.collection("medicates").addDocument(data: [
-            "name": medicate,
-            "medicineBottle": description
+        ref = db.collection(Localized.collection).addDocument(data: [
+            Localized.name: medicate,
+            Localized.description: description
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
