@@ -45,7 +45,6 @@ class HomeViewModel {
                 return
             }
             
-            //var finaltext: String = ""
             var biggestText: VisionTextElement?
             
             for block in result.blocks {
@@ -57,15 +56,7 @@ class HomeViewModel {
                 }
             }
             
-            do { _ = try TextFilter.possibleName(string: biggestText?.text ?? "Erro")
-                
-                //finaltext = filterResult[0]
-                //
-                vc.titleLabel.text = biggestText?.text.lowercased()
-            } catch {
-                //TODO: Empty State or Error
-                print(error)
-            }
+            vc.titleLabel.text = biggestText?.text.lowercased()
             
             AnalyticsEvents.searchingEvent(term: (biggestText?.text.lowercased()) ?? "Erro", type: "image")
             let webController = WebResultViewController(medicate: (biggestText?.text.lowercased()) ?? "Erro")
@@ -74,7 +65,6 @@ class HomeViewModel {
         }
     }
     
-    //Detects orientation of the selected or captured image
     func detectorOrientation(in image: UIImage) -> VisionDetectorImageOrientation {
         switch image.imageOrientation {
         case .up:
