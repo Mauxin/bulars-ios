@@ -40,7 +40,6 @@ class HomeViewModel {
         
         textDetector.process(visionImage) { result, error in
             guard error == nil, let result = result else {
-                //TODO: Empty State
                 vc.titleLabel.text = Localized.noText
                 return
             }
