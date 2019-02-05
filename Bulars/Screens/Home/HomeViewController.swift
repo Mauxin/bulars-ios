@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction private func startReadButtonAction() {
+        AnalyticsEvents.clickEvent(content: Localized.startImageSearch)
         viewModel.imageSearch(self)
     }
     

@@ -52,6 +52,8 @@ internal enum Localized {
   internal static let ok = Localized.tr("Localizable", "OK")
   /// https://www.bulario.com/
   internal static let siteUrl = Localized.tr("Localizable", "SITE_URL")
+  /// start_image_search
+  internal static let startImageSearch = Localized.tr("Localizable", "START_IMAGE_SEARCH")
   /// start_text_search
   internal static let startTextSearch = Localized.tr("Localizable", "START_TEXT_SEARCH")
   /// text
